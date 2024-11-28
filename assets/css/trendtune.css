@@ -12,6 +12,72 @@ figure, header, nav, section, article, aside, footer, figcaption {
   outline: 0;
 }
 
+.iframe-auto {
+  width: 100%;
+  height: calc(100vh - 100px); /* Por exemplo, altura 100% menos espaço para margens ou headers */
+}
+
+.arrow {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-button {
+  background-color: #666;
+  color: white;
+  padding: 12px 30px;
+  font-size: 15px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+.dropdown-button:hover {
+  font-size: 15px;
+  color: #ff5d88;
+  background-color: transparent;
+  border: 1px solid #ff5d88;
+  padding: 12px 30px;
+  display: inline-block;
+  border-radius: 25px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
 .clearfix:after {
   content: ".";
   display: block;

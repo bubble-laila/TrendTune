@@ -94,12 +94,25 @@ https://templatemo.com/tm-579-cyborg-gaming
                   <h4><em>Popularidade</em> por Cidade</h4>
                 </div>
                 <div class="main-info header-text">
-                  <p>Clique na cidade disponível que gostaria de ver as informações sobre popularidade de gêneros musicais.</p></p>
+                  <p>Clique na cidade disponível para ver as informações sobre a popularidade dos gêneros musicais.</p>
                 </div>
                 <div class="embed-responsive embed-responsive-16by9 d-flex justify-content-center">
                   <iframe class="embed-responsive-item w-100" style="aspect-ratio: 16/9;" src="https://app.powerbi.com/view?r=eyJrIjoiNWU1ZWY5MDQtNzI0MC00YWViLTlkZGUtNDJmNmEyMDkxYzU3IiwidCI6IjdlOTNlMjg2LWIyOWEtNDQ1NC1hNDFhLWU4NDE5ZWM5ZGViNSJ9" frameborder="0" allowFullScreen="true"></iframe>
                 </div>
                 
+              </div>
+              <div class="featured-games header-text">
+                <div class="main-info header-text">
+                  <p>Selecione uma cidade para ver detalhes de popularidade dos gêneros musicais.</p>
+                </div>
+                <div class="dropdown">
+                  <button class="dropdown-button" onclick="toggleDropdown()">Cidade<span><i class="arrow down" style="margin-left: 8px;"></i></span></button>
+                  <div class="dropdown-content" id="dropdown-menu">
+                      <a href="saopaulo.html">São Paulo</a>
+                      <a href="cuiaba.html">Cuiabá</a>
+                      <a href="outracidade.html">Outra Cidades</a>
+                  </div>
+                </div>
               </div>
           </div>
         </div>
@@ -128,6 +141,22 @@ https://templatemo.com/tm-579-cyborg-gaming
   <script src="assets/js/tabs.js"></script>
   <script src="assets/js/popup.js"></script>
   <script src="assets/js/custom.js"></script>
+  <script>
+    function toggleDropdown() {
+            const menu = document.getElementById('dropdown-menu');
+            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        }
+
+        // Fechar o dropdown ao clicar fora dele
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropdown-button')) {
+                const dropdowns = document.getElementsByClassName('dropdown-content');
+                for (let i = 0; i < dropdowns.length; i++) {
+                    dropdowns[i].style.display = 'none';
+                }
+            }
+        };
+  </script>
 
 
   </body>
