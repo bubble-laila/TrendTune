@@ -305,6 +305,10 @@ section {
   border-radius: 10px;
   padding: 10px;
   z-index: 999;
+
+  p {
+    color: #000000;
+  }
 }
 
 .help-button:hover .help-info {
